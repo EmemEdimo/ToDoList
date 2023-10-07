@@ -32,7 +32,7 @@ const createTask = function () {
     const time = taskTime();
     const item = `<li class="li">
             <i class="fa fa-square fa-2x task-state"></i> ${userInput.value}
-            <span class="time">${time}</span>
+            <span class="time">${time}</span><span class="delete-task"><i class="fa fa-trash fa-2x"></i></span>
           </li>`;
 
     tasks.insertAdjacentHTML('afterbegin', item);
@@ -42,8 +42,6 @@ const createTask = function () {
 };
 
 saveBtn.addEventListener('click', createTask);
-
-
 
 const taskState = function (task) {
   if (task.classList.contains('fa-square')) {
@@ -59,5 +57,12 @@ tasks.addEventListener('click', function (e) {
   if (e.target.classList.contains('task-state')) {
     const state = e.target;
     taskState(state);
+  } else if (e.target.classList.contains('fa-trash')) {
+    // const deletedItem = e.target.parentElement.parentElement;
+    e.target.closest('li').remove();
   }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') createTask();
 });

@@ -88,12 +88,20 @@ li {
   min-width: 10rem;
 }
 
-i {
+.task-state {
   justify-self: flex-start;
   cursor: pointer;
   color: orange;
   background-color: #444;
 }
+
+.delete-task {
+  cursor: pointer;
+  color: orange;
+  font-size: 1.5rem;
+}
+
+/* MEDIA QUERIES */
 
 @media (max-width: 600px) {
   .controls {
@@ -143,5 +151,9 @@ i {
 
   .time {
     min-width: 7rem;
+  }
+
+  .delete-task {
+    font-size: 1rem;
   }
 }
