@@ -12,7 +12,8 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   color: #f3f3f3;
-  background-color: #b3aeae;
+  /* background-color: #b3aeae; */
+  background-color: #444;
   height: 100vh;
   padding: 2rem;
 }
@@ -21,12 +22,15 @@ body {
   position: relative;
   background-color: #444;
   max-width: 100rem;
+  /* width: 80vw; */
   margin: 5rem auto;
   padding: 3rem;
 }
 
 .controls {
   margin: 3rem auto;
+  display: flex;
+  gap: 1rem;
 }
 
 #user-input {
@@ -38,11 +42,9 @@ body {
   border-bottom-left-radius: 5px;
   margin-left: 2rem;
   transition: all 0.75s ease;
-  /* display: inline-block; */
 }
 
 #user-input:focus {
-  /* outline: none; */
   outline-color: #b3aeae;
 }
 
@@ -70,16 +72,16 @@ li {
   font-size: 2rem;
   color: #ffffff;
   text-transform: capitalize;
-  /* font-weight: 600; */
   border: 2px solid #f0f0f0;
   border-radius: 5px;
-  /* margin-bottom: 10px; */
-  background-color: #b3aeae;
+  /* background-color: #b3aeae; */
+  background-color: #444;
   margin-top: 2rem;
   transition: all 0.75s ease;
 }
 
 .time {
+  text-align: right;
   margin-left: auto;
   /* border: 1px solid red; */
   justify-self: flex-end;
@@ -89,4 +91,57 @@ li {
 i {
   justify-self: flex-start;
   cursor: pointer;
+  color: orange;
+  background-color: #444;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+  #user-input {
+    width: 100%;
+    align-self: center;
+    margin-left: 0;
+    border-radius: 5px;
+  }
+  #btnsave {
+    align-self: flex-end;
+    border-radius: 5px;
+  }
+
+  li {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  #btnsave {
+    padding: 1rem 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+
+  .time {
+    min-width: 7rem;
+  }
 }
