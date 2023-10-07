@@ -13,14 +13,14 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #f3f3f3;
   /* background-color: #b3aeae; */
-  background-color: #444;
+  background-color: #222;
   height: 100vh;
   padding: 2rem;
 }
 
 .container {
   position: relative;
-  background-color: #444;
+  background-color: #222;
   max-width: 100rem;
   /* width: 80vw; */
   margin: 5rem auto;
@@ -75,7 +75,7 @@ li {
   border: 2px solid #f0f0f0;
   border-radius: 5px;
   /* background-color: #b3aeae; */
-  background-color: #444;
+  /* background-color: #444; */
   margin-top: 2rem;
   transition: all 0.75s ease;
 }
